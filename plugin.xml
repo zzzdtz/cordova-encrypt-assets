@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-encrypt-assets"
-    version="0.0.6">
+    version="0.0.7">
 
     <name>encrypt-assets</name>
     <description>
@@ -26,7 +26,7 @@
 
         <!-- lib SDK -->
         <lib-file src="src/android/libs/encrypt-assets-0.5.jar"/>
-        <source-file src="src/android/lib/encrypt-assets-0.5.jar" target-dir="libs" />
+      
 
 
         <!-- permission config -->
