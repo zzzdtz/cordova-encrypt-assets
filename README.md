@@ -21,7 +21,7 @@ npm install shelljs zach-zip
 
 #安装
 ```
-cordova plugin add https://github.com/zhangjianying/cordova-encrypt-assets.git
+cordova plugin add https://github.com/zzzdtz/cordova-encrypt-assets.git
 ```
 
 #修改工程MainActivity
