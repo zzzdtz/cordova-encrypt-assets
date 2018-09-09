@@ -7,7 +7,7 @@ var
   shell = require('shelljs'),
   zachZip = require( "zach-zip" ),
   assetsJar = process.env.PWD+'/platforms/android/app/libs/encrypt-assets-0.5.jar',
-  assetsdir = process.env.PWD+'/platforms/android/app/src/main/assets';
+  assetsdir = process.env.PWD+'/platforms/android/src/main/assets';
 
   require('shelljs/global'); 
 

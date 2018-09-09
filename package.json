@@ -1,11 +1,35 @@
 {
-  "name": "cordova-encrypt-assets",
-  "version": "2.0.0",
-  "description": "",
+  "_from": "git+https://github.com/zhangjianying/cordova-encrypt-assets.git",
+  "_id": "cordova-encrypt-assets@1.0.0",
+  "_inBundle": false,
+  "_location": "/cordova-encrypt-assets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/zhangjianying/cordova-encrypt-assets.git",
+    "rawSpec": "https://github.com/zhangjianying/cordova-encrypt-assets.git",
+    "saveSpec": "git+https://github.com/zhangjianying/cordova-encrypt-assets.git",
+    "fetchSpec": "https://github.com/zhangjianying/cordova-encrypt-assets.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/zhangjianying/cordova-encrypt-assets.git#f1f4e04e01db7d0133c3b8bce73b7840dea95599",
+  "_spec": "https://github.com/zhangjianying/cordova-encrypt-assets.git",
+  "_where": "C:\\Users\\Administrator\\Desktop\\property",
+  "author": {
+    "name": "zjy"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "cordova项目加密android assets 下的文件",
+  "license": "MIT",
   "main": "index.js",
+  "name": "cordova-encrypt-assets",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "zjy",
-  "license": "MIT"
+  "version": "1.0.0"
 }

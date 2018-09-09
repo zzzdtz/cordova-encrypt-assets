@@ -1,4 +1,10 @@
 # cordova-encrypt-assets
+
+基于之前的cordova-encrypt-assets
+因为cordova新版的安卓目录已经变化
+所以进行了部分改造
+
+
 cordova项目加密android assets 下的文件
 
 1. 会将android/assets/www 目录先打包成zip文件
@@ -21,6 +27,9 @@ cordova plugin add https://github.com/zhangjianying/cordova-encrypt-assets.git
 #修改工程MainActivity
 ```
 package com.talkweb;
+
+import com.zsoftware.encryptassets.CordovaActivity;  //这句很重要
+
 import android.os.Bundle;
 
 
@@ -30,35 +39,16 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
-        // enable Cordova apps to be started in the background
-        Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.getBoolean("cdvStartInBackground", false)) {
-            moveTaskToBack(true);
-        }
         
-		//加上下面这句
-		String loadURL = getIntent().getStringExtra("loadURL");
-        // Set by <content src="index.html" /> in config.xml
-        loadUrl(loadURL);
+        //开始解压缩 加密文件
+        beginEcryptedAction();
+        // 加载
+        loadUrl(loadURL());
     }
 }
 
 ```
 
-#修改工程 AndroidManifest.xml
-去掉启动MainActivity下的intent-filter,只保留ImpEncryptActivity
-```xml
-		<activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
-        </activity>
-			
-		<activity android:name="com.zsoftware.encryptassets.ImpEncryptActivity" >
-            <intent-filter android:label="@string/launcher_name">
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-```
 
 #已知问题
 zach-zip 使用的7z.exe 7z.dll对32位系统支持不够好. 需要手工替换一下

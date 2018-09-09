@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-encrypt-assets"
-    version="0.0.7">
+    version="0.0.5">
 
     <name>encrypt-assets</name>
     <description>
@@ -13,7 +13,9 @@
     <!-- <repo>https://github.com/gengen1988/xgpush-cordova.git</repo>
     <issue>https://github.com/gengen1988/xgpush-cordova/issues</issue> -->
 
-  
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
 
    
@@ -23,34 +25,21 @@
         <!-- source file   -->
         <source-file src="src/android/com/zsoftware/encryptassets/ImpEncryptActivity.java" target-dir="src/com/zsoftware/encryptassets/" />
         <source-file src="src/android/com/zsoftware/encryptassets/ImpEncryptApp.java" target-dir="src/com/zsoftware/encryptassets/" />
+        <source-file src="src/android/com/zsoftware/encryptassets/CordovaActivity.java" target-dir="src/com/zsoftware/encryptassets/" />
 
         <!-- lib SDK -->
         <lib-file src="src/android/libs/encrypt-assets-0.5.jar"/>
-      
 
-
+       
         <!-- permission config -->
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-			<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
         </config-file>
-		
-		
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			 <activity android:label="@string/activity_name" android:name="com.zsoftware.encryptassets.ImpEncryptActivity" android:theme="@android:style/Theme.Translucent" >
-				<intent-filter android:label="@string/launcher_name">
-					<action android:name="android.intent.action.MAIN" />
-					<category android:name="android.intent.category.LAUNCHER" />
-				</intent-filter>
-			</activity>
-		</config-file>
 
         <!-- 修改 AndroidManifest.xml application  add android:name="com.zsoftware.encryptassets.ImpEncryptApp" -->
         <hook type="before_compile" src="scripts/changeAppParent.js" />
         <hook type="before_compile" src="scripts/removeWWW.js" />
-		
-		<framework src="com.android.support:support-v4:27.+" />
     </platform>
 
    
