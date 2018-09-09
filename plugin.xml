@@ -13,9 +13,7 @@
     <!-- <repo>https://github.com/gengen1988/xgpush-cordova.git</repo>
     <issue>https://github.com/gengen1988/xgpush-cordova/issues</issue> -->
 
-    <engines>
-        <engine name="cordova" version=">=6.0.0" />
-    </engines>
+  
 
 
    
@@ -27,6 +25,7 @@
         <source-file src="src/android/com/zsoftware/encryptassets/ImpEncryptApp.java" target-dir="src/com/zsoftware/encryptassets/" />
 
         <!-- lib SDK -->
+        <lib-file src="src/android/libs/encrypt-assets-0.5.jar"/>
         <source-file src="src/android/lib/encrypt-assets-0.5.jar" target-dir="libs" />
 
 
